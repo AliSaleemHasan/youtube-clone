@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Video from "./Video";
 import "./Videos.css";
 import axios from "./axios";
 import requests from "./requests";
+import { LoadableVideo } from "./loadable";
 
 function Videos() {
   const [veds, setVeds] = useState([]);
@@ -17,7 +17,7 @@ function Videos() {
   return veds.length > 0 ? (
     <div className="videos">
       {veds.map((video) => (
-        <Video
+        <LoadableVideo
           key={video.id}
           ID={video.id}
           title={video.snippet.localized.title}

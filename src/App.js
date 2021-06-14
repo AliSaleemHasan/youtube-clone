@@ -1,36 +1,38 @@
 import React from "react";
 import "./App.css";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Videos from "./Videos";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Search from "./Search";
-import VideoPlayer from "./VideoPlayer";
-import History from "./History";
+import {
+  LoadableHeader,
+  LoadableHistory,
+  LoadableSearch,
+  LoadableSidebar,
+  LoadableVideos,
+  LoadableVideoPlayer,
+} from "./loadable";
 function App() {
   return (
     <div className="app">
       <Router>
-        <Header />
+        <LoadableHeader />
         <Switch>
           <Route path="/search/:searchtitle">
             <div className="app__body">
-              <Sidebar />
-              <Search />
+              <LoadableSidebar />
+              <LoadableSearch />
             </div>
           </Route>
 
           <Route path="/video/:videoId">
-            <VideoPlayer />
+            <LoadableVideoPlayer />
           </Route>
 
           <Route path="/history">
-            <History />
+            <LoadableHistory />
           </Route>
           <Route path="/">
             <div className="app__body">
-              <Sidebar />
-              <Videos />
+              <LoadableSidebar />
+              <LoadableVideos />
             </div>
           </Route>
         </Switch>
