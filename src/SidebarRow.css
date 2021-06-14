@@ -1,0 +1,30 @@
+.sidebarRow {
+  display: flex;
+  place-items: center;
+  padding: 2px 0 2vh 1vw;
+
+  color: #ccc;
+}
+.sidebarRow:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+.sidebarRow__selected {
+  background-color: #555;
+}
+.sidebarRow__selected > .sidebarRow__icon {
+  color: red;
+}
+.sidebarRow > h4 {
+  margin-left: 1vw;
+}
+
+@media (max-width: 768px) {
+  .sidebarRow > h4 {
+    display: none;
+  }
+  .sidebarRow {
+    justify-content: center;
+    padding: 0 7.5%;
+  }
+}

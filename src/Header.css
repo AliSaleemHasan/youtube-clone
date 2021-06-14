@@ -1,0 +1,69 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  background-color: #222;
+  height: 50px;
+}
+
+.header__drawer {
+  color: #fff;
+  margin: 0 20px;
+}
+
+.header__left {
+  display: flex;
+  place-items: center;
+}
+
+.header__logo {
+  margin-left: 20px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.drawer__icon {
+  color: #fff;
+}
+
+.header__center > form {
+  display: flex;
+  place-items: center;
+  width: 45vw;
+  border: 1px solid #333;
+}
+.header__center > form > .MuiButton-root {
+  background-color: #333;
+  height: 28px;
+  border-radius: 0;
+  flex: 0.1;
+  color: #555;
+}
+
+.header__center > form > input {
+  border: 1px solid #333;
+  height: 26px;
+  background-color: #111;
+  color: #fff;
+  flex: 0.9;
+}
+
+.header__center > form > input:focus {
+  outline: none;
+}
+
+.header__right {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  form > .MuiButton-root {
+    display: none;
+  }
+  .header__center > form {
+    border: none;
+  }
+}

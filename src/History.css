@@ -1,0 +1,19 @@
+.history__notEmpty {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #111;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.history {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  background-color: #111;
+  color: #f0f8ff;
+  place-content: center;
+}
+
+.history__empty {
+}
